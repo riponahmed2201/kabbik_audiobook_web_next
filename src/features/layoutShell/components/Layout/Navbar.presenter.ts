@@ -1,5 +1,5 @@
 'use client'
-import { fetchDataFromJson, getCategoryData, getPlayListBooks, getPreferenceData, getUserProfile, postSendOtp } from "@/utils/apiServices"
+import { fetchDataFromJson, getCategoryData, getPreferenceData, getUserProfile, postSendOtp } from "@/utils/apiServices"
 import { MouseEvent, RefObject, useCallback, useEffect, useRef, useState } from "react"
 import Cookies from "js-cookie";
 import { TCategoryItem, TUserProfile } from "@/shared/ui/static/types";
@@ -15,9 +15,6 @@ import { siteConfig } from "@/config/config";
 import { paths } from "@/utils/Paths";
 import { ReduxShowLoginModal } from "@/features/auth/store/LoginSlice";
 import { setStaticTexts } from "@/features/home/store/staticTextSlice";
-import { setPlaylistValue } from "@/features/playlist/store/PlaylistSlice";
-
-
 const useNavbar = () => {
     const [showCategories,setShowCategories]=useState<boolean>(false)
     const [mobileMenu,setMobileMenu]=useState<boolean>(false);
@@ -43,19 +40,6 @@ const useNavbar = () => {
   const boxRef=useRef<HTMLLIElement>(null);
 
   const staticText=useAppSelector((store)=>store?.staticTexts?.data?.home_page_steps_by_steps)
-  const playListData=useAppSelector(store=>store.playList.playlistData)
-
-  const getPlaylistItems=async()=>{
-    let result = await getPlayListBooks();
-    dispatch(setPlaylistValue(result.data));
-  }
-  useEffect(()=>{
-    if(playListData.length){
-      return
-    }
-    getPlaylistItems();
-  },[])
-  
   const getStaticData=async()=>{
       let result = await fetchDataFromJson();
       //console.log(result);

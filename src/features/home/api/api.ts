@@ -148,22 +148,6 @@ export const leaderboard_top_listners = async (userId:number) => {
 
 
 
-
-export const continue_listen_stat_post = async (payload:ContinueBookStatusResponse) => {
-  let url = apiEndPoints.continue_listen_stat_post ;
-  
-  return await CommonApiHandler(
-    {
-      name: "continue_listen_stat_post",
-      url:url,
-      method: TMethods.POST,
-      body:JSON.stringify(payload)
-    }
-  )
-};
-
-
-
 export const getStoreProducts = async () => {
   const url = `${apiEndPoints.getStoreItem}`;
     return await CommonApiHandler(

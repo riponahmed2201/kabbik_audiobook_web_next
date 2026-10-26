@@ -186,7 +186,6 @@ export default function ProfileDashboard(profileData: any) {
   };
      const menuItems = [
       {name:"লাইব্রেরি ও কনটেন্ট",buttons:[
-        { title: 'আমার প্লে-লিস্ট',color:'#A731EF', icon: <MyPlayList />, gradient: '',hasNewBadge: true ,handleClick:()=>router.push(paths.myPlayList) },
         { title: 'আমার ফেভারিটস',color:'#00BDD5', icon: <PlayIcon />, gradient: '' , handleClick:()=>{setShowFavoritePage(true)} },
         { title: 'বই রিকোয়েস্ট করুন',color:'#52C9FB', icon: <BookIcon color="white" />, gradient: '', handleClick:()=>{setShowBookRequestModal(true)} },
         { title: 'আমার রেন্ট করা বই',color:'#E12D90', icon: <UserIcon />, gradient: '', handleClick:()=>{setShowMyRents(true)} },

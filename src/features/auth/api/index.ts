@@ -11,8 +11,6 @@ export { postFacebookLogin } from "./api";
 export { setPasswordApi } from "./api";
 export { accountDeletion } from "./api";
 export { getUserProfile } from "./api";
-export { getSessionInit } from "./api";
-export { getSessionLog } from "./api";
 export { debuggerLog } from "./api";
 export { testGet } from "./api";
 export { testPost } from "./api";

@@ -46,3 +46,16 @@ Domain HTTP helpers live in `features/<name>/api/`. The compatibility barrel `@/
 ## Migration
 
 During transition, avoid new imports from `@/components/*` or deep paths under `features/*/components`. Prefer `@/features/<name>`.
+
+## Web listening scope
+
+The marketing web app is **discovery and commerce only**: browse audiobooks, subscribe, rent, and account flows. **Audiobook playback and resume happen in the native Kabbik app** — there is no web `<audio>` player, global mini-player, or my-playlist feature. Promo **video** (home reels, `/reels`) remains on web via `VideoPlayer`.
+
+## Environment
+
+| Variable | Purpose |
+|----------|---------|
+| `NEXT_PUBLIC_GUEST_API_TOKEN` | JWT for logged-out API calls (replaces hardcoded token in repo) |
+| `NEXT_PUBLIC_GUEST_USER_ID` | Guest user id (default `2820`) |
+
+Use `.env.example` as a template. Prefer `@/features/<name>/api` over `@/utils/apiServices` for new code (ESLint enforced).

@@ -513,7 +513,7 @@ export const subs_page_trackerApi = async (payload: UserActionTrack) => {
   const raw = JSON.stringify(payload);
   return await CommonApiHandler(
     {
-      name: "continueListeningPostApi",
+      name: "subs_page_trackerApi",
       url:url,
       method: TMethods.POST,
       body:raw

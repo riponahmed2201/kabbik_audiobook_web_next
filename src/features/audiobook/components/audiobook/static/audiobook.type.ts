@@ -1,5 +1,3 @@
-import { globalAudioPlayerSlice } from "@/shared/ui/static/types";
-
 
 
 export interface AuthorInfo {
@@ -48,45 +46,12 @@ export interface RatingReviewInfo {
 
 }
 
-
-export type TBigPlayerProps={
-  bookId:number|null;
-  audioBookData:TAudioBookDetails;
-  togglePlayList:(val:number,val2:number)=>void;
-  index:number;
-  audioPlayerInfo?:globalAudioPlayerSlice,
-  isPlaying:boolean;
-  setWithoutBGM:()=>void;
-  withoutBGM:boolean;
-  setIsPlaying:(val:boolean)=>void;
-  hasAccess:(val:number)=>boolean;
-  audioRef: React.RefObject<HTMLAudioElement | null>;
-  epList: TEpisode[];
-  audioPlayer: string;
-  currentTime: number;
-  setCurrentTime: (currentTime: number) => void;
-  setPlaybackRate:(val: number) => void;
-  setTimerMin:(val: number) => void;
-  playbackRate: number;
-  timerMin: number;
-  setShowBigPlayer: (val: boolean) => void;
-  setShowSpeedModal:(val:boolean)=>void;
-  setShowSleeperModal:(val:boolean)=>void;
-  favSubmit:()=>void;
-  isFavorite:boolean;
-  handleShrink:()=>void;
-  resumeTimeRef?: React.MutableRefObject<number | null>;
-  onAudioLoadingChange?: (loading: boolean) => void;
-}
-
 export interface PageProps {
   audiobookData: TAudioBookDetails;
   bookId: number;
   authorDetailsData: {data:TAuthor[]};
   castData: {data:castCrewInfo[]};
   reviewDetailsData: {data:RatingReviewInfo[]};
-  episodeId: number;
-  runningTime: number;
 }
 
 export interface UserProfileInfo {
@@ -192,13 +157,3 @@ export type TAuthor={
   created_at: string // ISO date string
   updated_at: string // ISO date string
 }
-
-
-export  interface TimerOption {
-  label: string;
-  value: number;
-  isStop?: boolean;
-}
-
-export type TAudioPlayer={url?:string,runTime?:number,playing?:boolean}|null
-// interface castCrewInfo extends Array<castCrewInfo>{}

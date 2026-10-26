@@ -1,4 +1,3 @@
-import { TAudioBookDetails } from "@/features/audiobook/components/audiobook/static/audiobook.type";
 import { ReelType } from "@/features/home/components/Home/static/utils";
 
 export type TCommonBtnProps={
@@ -266,18 +265,6 @@ export  type UpdateUserPayload = {
 };
 
 
-export type globalAudioPlayerSlice={
-  bookIds:number[];
-  audibookDetailsData:TAudioBookDetails|null;
-  playerBook:number|null;
-  playerEpisodeInd:number|null;
-  timer:number|null;
-  speed:number|null;
-  withBg:boolean;
-  playAll?:boolean;
-}
-
-
 export interface ProductInfo {
   id: number;
   name: string;
@@ -322,17 +309,6 @@ export type ContinueBookStatusItem = {
 export type ContinueBookStatusResponse = {
   data: ContinueBookStatusItem[];
 };
-
-export type RawItem = {
-  audiobookId: number;
-  audiobookImg: string;
-  episodeId: number;
-  episodeName: string;
-  runningTime: number;
-  duration: number;
-  isFree: number;
-};
-
 
 export type ContinueReadingItem = {
   book_id: number;

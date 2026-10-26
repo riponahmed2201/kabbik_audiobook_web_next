@@ -10,9 +10,6 @@ import React from 'react'
 import { getDictionary } from '../dictionaries';
 import ReferAndEarn from '@/features/catalog/components/CategoryWiseBooks/ReferAndEarn.view';
 import PlayListBooks from '@/features/catalog/components/CategoryWiseBooks/PlayListBooks';
-import { paths } from '@/utils/Paths';
-import Link from 'next/link';
-import MyPlayList from '@/svgs/MyPlayList.svg';
 import { cookies } from 'next/headers';
 import RentBanner from '@/features/catalog/components/CategoryWiseBooks/FixedRentSection.view';
 
@@ -77,9 +74,6 @@ const CategoryPage = async({
                     শ্রোতাদের প্রথম পছন্দ এখন এক ক্লিকে।
                   </p>
                 </div>
-                <Link href={paths.myPlayList} className={`${userId && userId!=='2820'?'':'hidden'} absolute flex items-center py-1.5 px-2.5 border rounded-[6px] border-muted2 z-[4] right-0 text-white top-6`}>
-                  <span className='inline-block w-4 h-4'><MyPlayList/></span> <span className='hidden sm:block'>প্লেলিস্ট দেখুন</span> 
-                </Link>
               </div>
             }
            {folders?

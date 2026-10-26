@@ -52,6 +52,12 @@ export async function middleware(req: NextRequest) {
   // "languages"
 
    const { pathname } = req.nextUrl
+   if (pathname.includes('/my-playlist')) {
+    const locale = pathname.split('/')[1];
+    const prefix = locales.includes(locale) ? `/${locale}` : '';
+    const res = NextResponse.redirect(new URL(`${prefix}/search`, req.url), 307);
+    return withCorsHeaders(res, origin);
+  }
    if (pathname==='/payment-info') {
     return withCorsHeaders(response, origin)
   }

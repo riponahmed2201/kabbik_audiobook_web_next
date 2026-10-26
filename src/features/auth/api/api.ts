@@ -397,37 +397,6 @@ export const getUserProfile =async () => {
 
 
 
-export const getSessionInit = async (id: number|string, episode_id: number|string) => {
-  const url = `${apiEndPoints.sessionInit}id=${id}&episode_id=${episode_id}`;
-  
-  return await CommonApiHandler(
-    {
-      name: "getSessionInit",
-      url:url,
-      method: TMethods.GET,
-      extraHeaders:{credentials: "include"},
-      defaultTokenAllowed:false
-    }
-  )
-};
-
-
-
-export const getSessionLog = async (play: boolean) => {
-  const url = `${apiEndPoints.sessionLog}play=${play}`;
-  
-  return await CommonApiHandler(
-    {
-      name: "getSessionLog",
-      url:url,
-      method: TMethods.GET,
-      extraHeaders:{credentials: "include"},
-      defaultTokenAllowed:false
-    }
-  )
-};
-
-
 
 
 export const debuggerLog = async (payload:any) => {

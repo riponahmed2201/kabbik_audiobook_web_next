@@ -1,4 +1,4 @@
-import SearchBooks from '@/features/playlist/components/MyPlayList/SearchBooks/SearchBooks.view'
+import SearchBooks from '@/features/catalog/components/search/SearchBooks.view'
 import React from 'react'
 
 const page = () => {

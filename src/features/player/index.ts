@@ -1,7 +1,1 @@
-export { default as GlobalAudioPlayer } from "./components/GlobalAudioPlayer/GlobalAudioPlayer";
-export * from "./api";
-export {
-  setglobalAudioPlayers,
-  updateglobalAudioPlayers,
-  deleteglobalAudioPlayers,
-} from "./store/GlobalAudioPlayerSlice";
+/** Video playback for reels/promo only — no audiobook player on web. */

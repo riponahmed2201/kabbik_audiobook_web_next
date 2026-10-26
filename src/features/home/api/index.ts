@@ -8,5 +8,4 @@ export { fetchDataFromJson } from "./api";
 export { academicList } from "./api";
 export { upcomingList } from "./api";
 export { leaderboard_top_listners } from "./api";
-export { continue_listen_stat_post } from "./api";
 export { getStoreProducts } from "./api";

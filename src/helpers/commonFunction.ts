@@ -5,8 +5,7 @@ import { Edigit, TShareContent, TtoastType, TtranslatorNums } from './commonType
 import { apiEndPoints } from '../utils/apiEndpoints';
 import { TBooks } from '@/pageTypes/home.types';
 import Cookies from 'js-cookie';
-import { ContinueBookStatusItem, RawItem } from '@/shared/ui/static/types';
-import { continue_listen_stat_post, logout } from '@/utils/apiServices';
+import { logout } from '@/utils/apiServices';
 // import { headers } from 'next/headers';
 // @ts-ignore
 // import ColorThief  from 'color-thief-browser';
@@ -514,67 +513,6 @@ export const clampAudio=(v: number, min: number, max: number) =>{
   return Math.max(min, Math.min(max, v));
 }
 
-type AudioReadyEvent = "loadedmetadata" | "canplay";
-
-export const waitForAudioReady = (
-  audio: HTMLAudioElement,
-  event: AudioReadyEvent = "canplay",
-  timeoutMs = 30000
-): Promise<void> => {
-  const minReadyState = event === "loadedmetadata" ? 1 : 3;
-  if (audio.readyState >= minReadyState) {
-    return Promise.resolve();
-  }
-
-  return new Promise((resolve, reject) => {
-    const cleanup = () => {
-      audio.removeEventListener(event, onReady);
-      audio.removeEventListener("error", onError);
-      window.clearTimeout(timer);
-    };
-    const onReady = () => {
-      cleanup();
-      resolve();
-    };
-    const onError = () => {
-      cleanup();
-      reject(new Error("audio load error"));
-    };
-    const timer = window.setTimeout(() => {
-      cleanup();
-      reject(new Error("audio load timeout"));
-    }, timeoutMs);
-
-    audio.addEventListener(event, onReady);
-    audio.addEventListener("error", onError);
-  });
-};
-
-export const seekAudioWhenReady = async (
-  audio: HTMLAudioElement,
-  seekTime: number,
-  setCurrentTime?: (time: number) => void
-) => {
-  if (!seekTime || seekTime <= 0 || !isFinite(seekTime)) return;
-  await waitForAudioReady(audio, "loadedmetadata");
-  audio.currentTime = seekTime;
-  setCurrentTime?.(seekTime);
-};
-
-export const resolveEpisodeAudioSrc = (
-  episode: { file_path?: string; bgm_filepath?: string } | undefined,
-  signedUrl?: string
-) => {
-  if (!episode) return signedUrl ?? "";
-  if (episode.bgm_filepath) {
-    return episode.bgm_filepath;
-  }
-  return episode.file_path || signedUrl || "";
-};
-
-export const isDirectEpisodeUrl = (filePath?: string) =>
-  Boolean(filePath?.includes(".amazonaws.com"));
-
 export const formatNumber = (num: number): any => {
   if (num >= 1e9) {
     return (num / 1e9).toFixed(1) + "B";
@@ -984,24 +922,6 @@ export function getBanglaDateDifference(isoDate: string,countOnly?:boolean): str
 export const playCount=(val:number)=>{
   if(val<1000)return val
   else return `${(val/1000).toFixed(2)}k listens`
-}
-
-
-export async function convertToContinueBookStatus(
-  data: RawItem[],
-  userId: number
-) {
-  let payloadData= data.map(item => ({
-    bookId: item.audiobookId,
-    user_id: userId,
-    current_episode: item.episodeId,
-    total_duration: item.duration,
-    total_listen_time: Math.floor(item.runningTime),
-    current_timer: Math.floor(item.runningTime)
-  }));
-
-  return await continue_listen_stat_post({data:payloadData});
-
 }
 
 

@@ -1,7 +1,6 @@
 import { HomeInfo } from '@/pageTypes/home.types';
 import { useAppSelector } from '@/store/store';
-import { continueListeningPostApi } from '@/utils/apiServices';
-import React, { Dispatch, RefObject, SetStateAction, useCallback, useEffect, useRef, useState } from 'react'
+import React, { Dispatch, RefObject, SetStateAction, useEffect, useRef, useState } from 'react'
 
 const useHomeComponent = ({homeData}:{homeData:HomeInfo}) => {
     const [player,setPlayer]=useState(false);
@@ -22,22 +21,12 @@ const useHomeComponent = ({homeData}:{homeData:HomeInfo}) => {
     const [topVideo,setTopVideo]=useState({video:StaticTexts?.home_video?.videos[0],index:0});
     const [middleVideo,setMiddleVideo]=useState({video:StaticTexts?.campaign_video?.videos[0],index:0});
     const [lastVideo,setLastVideo]=useState({video:StaticTexts?.nepal_tour_video?.videos[0],index:0});
-    // const userContinueData = allHomeData.userContinueData?.data;
-    const [continueData, setcontiuneData] = useState(
-    user?.id && user?.id!=2820
-      ? JSON.parse(localStorage.getItem("continueListeningData")!)
-      :  []
-  );
 
     useEffect(()=>{
         setTopVideo({video:StaticTexts?.home_video?.videos[0],index:0});
         setMiddleVideo({video:StaticTexts?.campaign_video?.videos[0],index:0})
         setLastVideo({video:StaticTexts?.nepal_tour_video?.videos[0],index:0})
     },[StaticTexts])
-
-    useEffect(()=>{
-        console.log(homeData,"continueData");
-    },[continueData])
 
    useEffect(()=>{
     // if()
@@ -51,35 +40,6 @@ const useHomeComponent = ({homeData}:{homeData:HomeInfo}) => {
     }
    },[user])
 
-
-    useEffect(()=>{
-        setcontiuneData(
-      JSON.parse(localStorage.getItem("continueListeningData")!)
-            ? JSON.parse(localStorage.getItem("continueListeningData")!)
-            :  []
-        );
-    },[])
-
-    const userProfileLocal = useCallback(async () => {
-    if (user?.id && user?.id!=2820) {
-     
-    }
-    setcontiuneData(
-      JSON.parse(localStorage.getItem("continueListeningData")!)
-        ? JSON.parse(localStorage.getItem("continueListeningData")!)
-        :  []
-    );
-  }, [user?.id]);
-
-    //  useEffect(() => {
-    
-    //     const interval = async () => {
-    //     await continueListeningPostApi(
-    //         JSON.parse(localStorage.getItem("continueListeningData")!)
-    //     );
-    //     };
-    //     interval();
-    // }, [userProfileLocal])
 
     const goToNext=(type:'top'|'middle'|'last')=>{
         if(type==='top'){
@@ -144,8 +104,6 @@ const useHomeComponent = ({homeData}:{homeData:HomeInfo}) => {
             // }
         })
         setUserPreferdCats(selectedCats)
-        console.log(selectedCats,"selectedCats");
-        
     },[userPreference,categories])
     
     const togglePlay = () => {
@@ -179,7 +137,7 @@ const useHomeComponent = ({homeData}:{homeData:HomeInfo}) => {
     }
 
    
-  return {player,StaticTexts,setShowRomjan,showRomjanSpecial,setPlayer,videoRef,initialPlayer,setInitialPlayer,togglePlay,handleInitialPlay,setPlayer2,videoRef2,initialPlayer2,setInitialPlayer2,togglePlay2,handleInitialPlay2,player2,setPlayer3,videoRef3,initialPlayer3,setInitialPlayer3,togglePlay3,handleInitialPlay3,player3,userPreferdCats,topVideo,middleVideo,lastVideo,goToNext,user,continueData}
+  return {player,StaticTexts,setShowRomjan,showRomjanSpecial,setPlayer,videoRef,initialPlayer,setInitialPlayer,togglePlay,handleInitialPlay,setPlayer2,videoRef2,initialPlayer2,setInitialPlayer2,togglePlay2,handleInitialPlay2,player2,setPlayer3,videoRef3,initialPlayer3,setInitialPlayer3,togglePlay3,handleInitialPlay3,player3,userPreferdCats,topVideo,middleVideo,lastVideo,goToNext,user}
 }
 
 export default useHomeComponent

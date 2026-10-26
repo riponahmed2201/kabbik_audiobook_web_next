@@ -126,20 +126,6 @@ export const userSummary = async () => {
 
 
 
-export const userContinue = async () => {
-    const defaultUserId = "2820";
-    const userId = Cookies.get("id") ? Cookies.get("id") : defaultUserId;
-    return await CommonApiHandler(
-        {
-            name: "userContinue",
-            url: `${apiEndPoints.continueListeningGet}${userId}`,
-            method: TMethods.GET,
-        }
-    )
-};
-
-
-
 export const favoriteAudiobook = async () => {
   
     const userId = Cookies.get("id") ? Cookies.get("id") : "2820";
@@ -400,30 +386,3 @@ export const uploadFile = async (file: any) => {
 
 
 
-export const get_continue_listen_data = async (userId: number) => {
-  const url = `${apiEndPoints.get_continue_listen_data}${userId}`;
-  return await CommonApiHandler(
-    {
-      name: "ratingReviewList",
-      url:url,
-      method: TMethods.GET,
-    }
-  )
-};
-
-
-
-export const continueListeningPostApi = async (payload: any) => {
-  const url = `${apiEndPoints.continueListeningPost}${Cookies.get("id")}`;
-  const raw = JSON.stringify({
-    data: payload,
-  });
-  return await CommonApiHandler(
-    {
-      name: "continueListeningPostApi",
-      url:url,
-      method: TMethods.POST,
-      body:raw
-    }
-  )
-};

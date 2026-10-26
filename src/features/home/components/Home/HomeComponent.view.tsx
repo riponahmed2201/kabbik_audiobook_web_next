@@ -33,9 +33,9 @@ const Reels = dynamic(() => import("./Reels.view"), {
   ssr: false, // optional: disable server-side rendering
   loading: () => <p></p>, // optional fallback
 });
-const ContiniueListening = dynamic(() => import("./ContiniueListening.view"), {
-  ssr: false, // optional: disable server-side rendering
-  loading: () => <p></p>, // optional fallback
+const ContinueInApp = dynamic(() => import("./ContinueInApp.view"), {
+  ssr: false,
+  loading: () => <p></p>,
 });
 const HomeGamesSection = dynamic(() => import("@/features/entertainment/components/Entertainment/HomeGamesSection.view"), {
   ssr: false, // optional: disable server-side rendering
@@ -152,7 +152,7 @@ const HomeComponent = (props:THomeProps) => {
     const searchParams = useSearchParams();
     const utmSource = searchParams.get("utm_source");
    const track_id = searchParams.get("track_id");
-    const {initialPlayer,StaticTexts,initialPlayer2,initialPlayer3,userPreferdCats,topVideo,middleVideo,lastVideo,user,continueData} = useHomeComponent({homeData});
+    const {initialPlayer,StaticTexts,initialPlayer2,initialPlayer3,userPreferdCats,topVideo,middleVideo,lastVideo,user} = useHomeComponent({homeData});
     const [showRomjanSpecial,setShowRomjan]=useState(false);
 
     const [mounted, setMounted] = useState(false);
@@ -297,7 +297,7 @@ const HomeComponent = (props:THomeProps) => {
           </div>
             <div className=''>
             {/* <Link href={'/home_category_list/নতুন'}> */}
-                <ContiniueListening continueData={continueData}/>
+                <ContinueInApp />
               {/* </Link> */}
               
           </div>

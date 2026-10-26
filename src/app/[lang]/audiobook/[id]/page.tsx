@@ -4,7 +4,6 @@ import { audioBookDetails } from "@/features/audiobook/api/server";
 import  {RatingReviewInfo, AuthorInfo, castCrewInfo, PageProps } from "@/features/audiobook/components/audiobook/static/audiobook.type";
 import { authorDetails, castDetails, ratingReviewList } from "@/features/catalog/api";
 import { getDictionary } from "../../dictionaries";
-import GradientAudioPlayer from "@/shared/ui/AudioPlayer.view";
 import { AudiobookComponent } from "@/features/audiobook";
 
 export const metadata = {
@@ -14,16 +13,11 @@ export const metadata = {
 
 const Audiobook = async ({
   params,
-  searchParams,
 }: {
   params: Promise<{ id: string; lang: "en" | "bn" }>;
-  searchParams: Promise<{ episodeId?: string; time?: string }>;
 }) => {
   const { id } = await params;
-  const sp = await searchParams;
   const bookId = parseInt(id);
-  const episodeId = parseInt(sp.episodeId ?? "0");
-  const time = parseInt(sp.time ?? "0");
   const audiobookData: any = await audioBookDetails(bookId);
   // const authorData: PageProps['authorDetailsData'] = await authorDetails(authorName);
   // const castData: {data:castCrewInfo[]} = await castDetails(castName);
@@ -55,8 +49,6 @@ const Audiobook = async ({
           authorDetailsData={authorData}
           castData={castData}
           reviewDetailsData={reviewData}
-          episodeId={episodeId}
-          runningTime={time}
         />
       )}
             

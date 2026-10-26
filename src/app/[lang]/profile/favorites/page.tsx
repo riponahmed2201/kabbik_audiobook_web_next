@@ -1,15 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { deleteFavoritesApi, favoriteAudiobook, RemoveBooksFromPlaylist } from "@/utils/apiServices";
+import { deleteFavoritesApi, favoriteAudiobook } from "@/utils/apiServices";
 import { FavoriteAudioBookInfo } from "@/features/profile/components/Profile/static/profile.type";
 import Link from "next/link";
 import { paths } from "@/utils/Paths";
 import { toast } from "react-toastify";
 import Spinner from "@/shared/ui/Spinner.view";
 import { siteConfig } from "@/config/config";
-import { BookOpen, Delete, Heart, Play, Sparkles, Star, Trash2 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import ListenInApp from "@/features/audiobook/components/audiobook/ListenInApp.view";
+import { BookOpen, Heart, Trash2 } from "lucide-react";
 import { convertToBanglaDigits } from "@/helpers/commonFunction";
 
 interface Book {
@@ -21,8 +21,6 @@ interface Book {
 export default  function FavoritesPage () {
     let [books,setBooks]=useState<FavoriteAudioBookInfo[]>([]);
     let [loaderId,setLoaderId]=useState<number|string>(0);
-    const router=useRouter();
-     
     //  let books=result.data;
     const getBooks=async()=>{
       const result: {data:FavoriteAudioBookInfo[]} = await favoriteAudiobook();
@@ -138,14 +136,20 @@ export default  function FavoritesPage () {
                         </div> */}
                       </div>
 
-                      {/* Play Button */}
-                      <button
-                        onClick={() => router.push(paths.book_details(book.id))}
-                        className="mt-2 w-full  text-white font-semibold py-2 rounded-[4px] transition-all duration-200 shadow-lg btn_gradient_new flex items-center justify-center gap-1.5 text-xs"
-                      >
-                        <Play size={14} fill="white" />
-                        এখনি শুনুন 
-                      </button>
+                      <div className="mt-2 space-y-2">
+                        <Link
+                          href={paths.book_details(book.id)}
+                          className="w-full text-white font-semibold py-2 rounded-[4px] transition-all duration-200 shadow-lg btn_gradient_new flex items-center justify-center gap-1.5 text-xs"
+                        >
+                          <BookOpen size={14} />
+                          বই দেখুন
+                        </Link>
+                        <ListenInApp
+                          audiobookId={book.id}
+                          variant="inline"
+                          className="justify-center text-xs [&_a]:text-slate-300"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
