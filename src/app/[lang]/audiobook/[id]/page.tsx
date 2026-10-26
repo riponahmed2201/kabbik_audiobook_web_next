@@ -1,11 +1,11 @@
 
-import PageNotFound from "@/components/ui/NotFound.view";
-import { audioBookDetails } from "@/utils/server-api";
-import  {RatingReviewInfo, AuthorInfo, castCrewInfo, PageProps } from "@/components/audiobook/static/audiobook.type";
-import { authorDetails, castDetails, ratingReviewList } from "@/utils/apiServices";
+import PageNotFound from "@/shared/ui/NotFound.view";
+import { audioBookDetails } from "@/features/audiobook/api/server";
+import  {RatingReviewInfo, AuthorInfo, castCrewInfo, PageProps } from "@/features/audiobook/components/audiobook/static/audiobook.type";
+import { authorDetails, castDetails, ratingReviewList } from "@/features/catalog/api";
 import { getDictionary } from "../../dictionaries";
-import GradientAudioPlayer from "@/components/ui/AudioPlayer.view";
-import AudiobookComponent from "@/components/audiobook/BookDetails.view";
+import GradientAudioPlayer from "@/shared/ui/AudioPlayer.view";
+import { AudiobookComponent } from "@/features/audiobook";
 
 export const metadata = {
   title: "Audiobook details | Kabbik",

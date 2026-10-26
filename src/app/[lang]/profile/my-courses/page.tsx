@@ -1,11 +1,11 @@
 'use client'
-import { TMyCourse } from "@/components/Profile/static/profile.type";
+import { TMyCourse } from "@/features/profile/components/Profile/static/profile.type";
 import { convertToBanglaDigits } from "@/helpers/commonFunction";
 import { useAppSelector } from "@/store/store";
 import MyCourseIcon from "@/svgs/MyCourseIcon.svg";
 import { getPurchasedCourse } from "@/utils/apiServices";
 import { Book, CheckCircle, Clock, Play } from "lucide-react";
-// import { getPurchasedCourse } from "@/utils/server-api";
+// import { getPurchasedCourse } from "@/shared/api/server-api";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 

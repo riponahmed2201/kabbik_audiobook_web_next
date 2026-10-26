@@ -1,6 +1,6 @@
-import { TeamMemberCard } from '@/components/about/TeamMemberCard.view';
-import { container } from '@/components/ui/static/tailwind.classes';
-import { staticTextSlice } from '@/components/ui/static/types';
+import { TeamMemberCard } from '@/features/about/components/about/TeamMemberCard.view';
+import { container } from '@/shared/ui/static/tailwind.classes';
+import { staticTextSlice } from '@/shared/ui/static/types';
 import { fetchDataFromJson } from '@/utils/apiServices';
 import React from 'react'
 

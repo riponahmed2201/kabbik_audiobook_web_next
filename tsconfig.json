@@ -13,13 +13,17 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/features/*": ["./src/features/*"],
+      "@/shared/*": ["./src/shared/*"],
+      "@/utils/apiEndpoints": ["./src/shared/api/apiEndpoints.ts"],
+      "@/utils/CommonApicalls": ["./src/shared/api/CommonApicalls.ts"],
+      "@/utils/server-api": ["./src/shared/api/server-api.ts"],
+      "@/lib/utils": ["./src/shared/lib/utils.ts"],
+      "@/config/*": ["./src/shared/config/*"],
+      "@/svgs/*": ["./src/shared/icons/*"]
     }
   },
   "include": [

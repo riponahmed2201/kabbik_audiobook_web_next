@@ -1,11 +1,11 @@
-import { AccordionDemo } from "@/components/ui/Accordion";
+import { AccordionDemo } from "@/shared/ui/Accordion";
 import { CatagorySuggestionsInfo, HomeInfo, PromoBannerInfo, TopBannerImageInfo } from "@/pageTypes/home.types";
-import { categorySuggestions, homeListData, promoBannerList, topBanner, upcomingList } from "@/utils/apiServices";
+import { homeListData, promoBannerList, topBanner, upcomingList } from "@/features/home/api";
 import { Metadata } from "next";
 import Image from "next/image";
 import { getDictionary } from "./dictionaries";
-import HomeComponent from "@/components/Home/HomeComponent.view";
-import { getApprovedBlogs } from "@/utils/server-api";
+import { HomeComponent } from "@/features/home";
+import { getApprovedBlogs } from "@/features/blog/api/server";
 
 export const metadata: Metadata = {
   title: "Bangla Audiobook App | Kabbik Audiobook & Podcast",

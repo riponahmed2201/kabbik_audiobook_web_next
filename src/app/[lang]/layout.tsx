@@ -1,16 +1,16 @@
 // 'use client'
 import type { Metadata } from "next";
 import { ReduxProvider } from '@/app/Provider';
-import Navbar from "@/components/Layout/Navbar.view";
-import { categorySuggestions } from "@/utils/apiServices";
+import { Navbar } from "@/features/layoutShell";
+import { categorySuggestions } from "@/features/home/api";
 import { CatagorySugges } from "@/pageTypes/home.types";
-import Footer from "@/components/Home/Footer";
+import Footer from "@/features/home/components/Home/Footer";
 import { auth } from "../lib/auth";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { siteConfig } from "@/config/config";
-import { GlobalStateProvider } from "@/components/SessionProvider/SessionProvider";
-import QuizGif from "@/components/QuizCard/QuizGif";
+import { GlobalStateProvider } from "@/features/auth";
+import QuizGif from "@/features/quiz/components/QuizCard/QuizGif";
 
 export const instant = false;
 

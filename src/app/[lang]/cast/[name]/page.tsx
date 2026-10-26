@@ -1,8 +1,8 @@
 import { castDetails, castEpisodes } from "@/utils/apiServices";
 import { CastCrewEpisodesInfo, castCrewInfo } from "./cast.type";
 import Image from "next/image";
-import { container } from "@/components/ui/static/tailwind.classes";
-import { AudiobookCard } from "@/components/CategoryWiseBooks/AudioBookCard.view";
+import { container } from "@/shared/ui/static/tailwind.classes";
+import { AudiobookCard } from "@/features/catalog/components/CategoryWiseBooks/AudioBookCard.view";
 
 const Cast = async ({
   params,

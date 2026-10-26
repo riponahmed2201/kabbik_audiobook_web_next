@@ -1,4 +1,4 @@
-import Games from '@/components/Entertainment/Games.view'
+import Games from '@/features/entertainment/components/Entertainment/Games.view'
 import { getGames } from '@/utils/gamezop'
 import React from 'react'
 

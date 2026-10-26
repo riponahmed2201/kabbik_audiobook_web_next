@@ -1,0 +1,25 @@
+import Cookies from "js-cookie";
+import { apiEndPoints } from "@/shared/api/apiEndpoints";
+import { toast } from "react-toastify";
+// import { formatTime, showToast } from "";
+import { BkashOneTimePayload, BkashRecurringPayload, BlogInfo, DynamicSubscriptionPack, GPPayload, RobiPayload, TMethods, TtoastType } from "@/helpers/commonTypes";
+import { formatTime, getCookiesAsObject, getCountryCode, getCountryCode2, getCurrentMonthFirstDate, getDeviceInfo, getOrCreateDeviceId, normalizeMsisdn, showToast } from "@/helpers/commonFunction";
+import { CommonApiHandler, getHeaders } from "@/shared/api/CommonApicalls";
+import { TGamezopTracker, TSponsorRequest } from "@/utils/types";
+import { ContinueBookStatusResponse, UpdateUserPayload } from "@/shared/ui/static/types";
+import { siteConfig } from "@/config/config";
+import { UserActionTrack } from "@/features/profile/components/Profile/static/profile.type";
+
+
+export const gamezop_stat_tracker = async (payload:TGamezopTracker) => {
+  const url = `${apiEndPoints.gamezop_stat_tracker}`;
+  const raw = JSON.stringify(payload);
+  return await CommonApiHandler(
+    {
+      name: "sponsor_request",
+      url,
+      method: TMethods.POST,
+      body: raw ? raw : null, 
+    }
+ )
+};

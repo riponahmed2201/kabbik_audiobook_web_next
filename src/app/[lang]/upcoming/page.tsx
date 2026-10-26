@@ -1,16 +1,16 @@
-import { AudiobookCard } from '@/components/CategoryWiseBooks/AudioBookCard.view';
-import CategorySelector from '@/components/CategoryWiseBooks/CategorySelector.view';
-import { TCategoryComponent } from '@/components/CategoryWiseBooks/static/category.types';
-import ThreeDBanner from '@/components/CategoryWiseBooks/ThreeDBanner.view';
-import TopAudioBookSection from '@/components/CategoryWiseBooks/TopAudioBookSection.view';
-import { container } from '@/components/ui/static/tailwind.classes';
+import { AudiobookCard } from '@/features/catalog/components/CategoryWiseBooks/AudioBookCard.view';
+import CategorySelector from '@/features/catalog/components/CategoryWiseBooks/CategorySelector.view';
+import { TCategoryComponent } from '@/features/catalog/components/CategoryWiseBooks/static/category.types';
+import ThreeDBanner from '@/features/catalog/components/CategoryWiseBooks/ThreeDBanner.view';
+import TopAudioBookSection from '@/features/catalog/components/CategoryWiseBooks/TopAudioBookSection.view';
+import { container } from '@/shared/ui/static/tailwind.classes';
 import { decodeWord } from '@/helpers/commonFunction';
 import { homeCatagoryItems, upcomingList } from '@/utils/apiServices';
 import React from 'react'
 import { getDictionary } from '../dictionaries';
-import ReferAndEarn from '@/components/CategoryWiseBooks/ReferAndEarn.view';
+import ReferAndEarn from '@/features/catalog/components/CategoryWiseBooks/ReferAndEarn.view';
 import { UpComingInfo } from '@/utils/types';
-import { BookCard } from '@/components/CategoryWiseBooks/Upcoming.view';
+import { BookCard } from '@/features/catalog/components/CategoryWiseBooks/Upcoming.view';
 
 const CategoryPage = async ({
   params,

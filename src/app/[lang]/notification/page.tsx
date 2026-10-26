@@ -1,6 +1,4 @@
-import Notifications from '@/components/Notification/Notification.view'
-import { container } from '@/components/ui/static/tailwind.classes'
-import { getNotifications } from '@/utils/apiServices'
+import { Notifications } from '@/features/notification'
 import React from 'react'
 
 const page = () => {

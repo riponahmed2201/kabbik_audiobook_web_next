@@ -1,4 +1,4 @@
-import RedirectComponent from "@/components/RedirectComponent/RedirectComponent.view";
+import { RedirectComponent } from "@/features/layoutShell";
 import { auth } from "../../lib/auth";
 
 const GoogleRedirect = async ({

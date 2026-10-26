@@ -1,4 +1,4 @@
-import ReaferAndEarnDashboard from '@/components/ReferAndEarn/ReaferAndEarnDashboard.view'
+import ReaferAndEarnDashboard from '@/features/referEarn/components/ReferAndEarn/ReaferAndEarnDashboard.view'
 import React from 'react'
 
 const page = () => {

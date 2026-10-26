@@ -1,6 +1,6 @@
 'use client'
-import Loader from '@/components/PageLoader/PageLoader';
-import { ReferralData } from '@/components/ReferAndEarn/static/refeAndEarn.type';
+import Loader from '@/features/layoutShell/components/PageLoader/PageLoader';
+import { ReferralData } from '@/features/referEarn/components/ReferAndEarn/static/refeAndEarn.type';
 import { replacePlaceholder } from '@/helpers/commonFunction';
 import { fetchReferAndEarn } from '@/utils/apiServices';
 import PageLoader from 'next/dist/client/page-loader';

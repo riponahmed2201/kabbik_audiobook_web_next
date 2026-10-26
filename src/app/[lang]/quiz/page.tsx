@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import { useAppSelector } from '@/store/store';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { container } from '@/components/ui/static/tailwind.classes';
+import { container } from '@/shared/ui/static/tailwind.classes';
 import Link from 'next/link';
 import Image from 'next/image';
-// import {container} from '@/components/ui/static/tailwind.classes'
+// import {container} from '@/shared/ui/static/tailwind.classes'
 
 
 import 'swiper/css';
@@ -15,21 +15,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { get_Quizes ,getWinners,join_quizes,prevMatches, subs_page_trackerApi} from '@/utils/apiServices';
-import  QuizCard, { PrevQuizCard }  from '@/components/QuizCard/QuizCard';
+import  QuizCard, { PrevQuizCard }  from '@/features/quiz/components/QuizCard/QuizCard';
 import { MoveUpRight } from 'lucide-react';
-import CommonModal from '@/components/ui/CommonModal/CommonModal.view';
-import { WinnerModal } from '@/components/QuizCard/WinnerCard';
-import QuizParticipationFee from '@/components/QuizCard/QuizPayment';
-import MatchQuizCard from '@/components/QuizCard/QuizInitScreen';
-import QuizScreen from '@/components/QuizCard/Quiz';
-import QuizResultScreen from '@/components/QuizCard/QuizResult';
+import CommonModal from '@/shared/ui/CommonModal/CommonModal.view';
+import { WinnerModal } from '@/features/quiz/components/QuizCard/WinnerCard';
+import QuizParticipationFee from '@/features/quiz/components/QuizCard/QuizPayment';
+import MatchQuizCard from '@/features/quiz/components/QuizCard/QuizInitScreen';
+import QuizScreen from '@/features/quiz/components/QuizCard/Quiz';
+import QuizResultScreen from '@/features/quiz/components/QuizCard/QuizResult';
 import { paths } from '@/utils/Paths';
-import QuizTimeExpired from '@/components/QuizCard/QuizTimeEnd';
+import QuizTimeExpired from '@/features/quiz/components/QuizCard/QuizTimeEnd';
 import { groupMatchesByDay, isTimePassed } from '@/helpers/commonFunction';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-import { ReduxShowLoginModal } from '@/store/slicers/LoginSlice';
-import FAQSection from '@/components/QuizCard/QuizFaq';
+import { ReduxShowLoginModal } from '@/features/auth/store/LoginSlice';
+import FAQSection from '@/features/quiz/components/QuizCard/QuizFaq';
 
 const Page = () => {
     const prevRef = useRef(null);

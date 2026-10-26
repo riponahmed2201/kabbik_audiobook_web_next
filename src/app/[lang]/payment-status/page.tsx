@@ -1,5 +1,5 @@
 "use client";
-import { ReduxShowLoginModal } from "@/store/slicers/LoginSlice";
+import { ReduxShowLoginModal } from "@/features/auth/store/LoginSlice";
 import { useAppDispatch, useAppSelector } from "@/store/store";
 import { subs_page_trackerApi } from "@/utils/apiServices";
 import { paths } from "@/utils/Paths";

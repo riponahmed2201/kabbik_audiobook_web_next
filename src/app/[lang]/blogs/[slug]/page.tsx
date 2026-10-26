@@ -1,6 +1,6 @@
-import ElaborateBlog from "@/components/ElaborateBlog/ElaborateBlog.view";
-import PageNotFound from "@/components/ui/NotFound.view";
-import { getApprovedBlogBySlug } from "@/utils/server-api";
+import ElaborateBlog from "@/features/blog/components/ElaborateBlog/ElaborateBlog.view";
+import PageNotFound from "@/shared/ui/NotFound.view";
+import { getApprovedBlogBySlug } from "@/shared/api/server-api";
 
 // export const metadata = {
 //   title: "Blogs | Kabbik",

@@ -1,8 +1,8 @@
 'use client'
-import { PrevQuizCard } from '@/components/QuizCard/QuizCard';
-import { WinnerModal } from '@/components/QuizCard/WinnerCard';
-import CommonModal from '@/components/ui/CommonModal/CommonModal.view';
-import { container } from '@/components/ui/static/tailwind.classes';
+import { PrevQuizCard } from '@/features/quiz/components/QuizCard/QuizCard';
+import { WinnerModal } from '@/features/quiz/components/QuizCard/WinnerCard';
+import CommonModal from '@/shared/ui/CommonModal/CommonModal.view';
+import { container } from '@/shared/ui/static/tailwind.classes';
 import { groupByDayDhaka } from '@/helpers/commonFunction';
 import { getWinners } from '@/utils/apiServices';
 import { MoveUpRight } from 'lucide-react';

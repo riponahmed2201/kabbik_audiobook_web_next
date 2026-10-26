@@ -3,8 +3,8 @@ import {
   authorEpisodes,
 } from "@/utils/apiServices";
 import AuthorInfo, { AuthorEpisodesInfo } from "./author.type";
-import { container } from "@/components/ui/static/tailwind.classes";
-import { AudiobookCard } from "@/components/CategoryWiseBooks/AudioBookCard.view";
+import { container } from "@/shared/ui/static/tailwind.classes";
+import { AudiobookCard } from "@/features/catalog/components/CategoryWiseBooks/AudioBookCard.view";
 import Image from "next/image";
 
 const Author = async ({

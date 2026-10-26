@@ -1,15 +1,15 @@
 'use client'
-import CategorySelector from '@/components/CategoryWiseBooks/CategorySelector.view';
+import CategorySelector from '@/features/catalog/components/CategoryWiseBooks/CategorySelector.view';
 import {  fetchDataFromJson, upcomingList } from '@/utils/apiServices';
 import React from 'react'
 import { getDictionary } from '../dictionaries';
 import { UpComingInfo } from '@/utils/types';
-import { staticTextSlice } from '@/components/ui/static/types';
+import { staticTextSlice } from '@/shared/ui/static/types';
 import Link from 'next/link';
 import { paths } from '@/utils/Paths';
 import { useAppSelector } from '@/store/store';
 import Image from 'next/image';
-import CategoriesList from '@/components/category/CategoriesList.view';
+import CategoriesList from '@/features/catalog/components/category/CategoriesList.view';
 
 // export const metadata = {
 //   title: "Popular Categories | Kabbik",

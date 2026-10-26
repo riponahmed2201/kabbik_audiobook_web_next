@@ -1,7 +1,7 @@
 import { auth } from '@/app/lib/auth';
-import ProfileDashboard from '@/components/Profile/Profile2.view';
-import Profiles from '@/components/Profile/ProfileOptions.view'
-import TopSection from '@/components/Profile/TopSection.view'
+import ProfileDashboard from '@/features/profile/components/Profile/Profile2.view';
+import Profiles from '@/features/profile/components/Profile/ProfileOptions.view'
+import TopSection from '@/features/profile/components/Profile/TopSection.view'
 import React from 'react'
 
 export const metadata = {

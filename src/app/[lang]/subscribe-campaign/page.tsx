@@ -2,8 +2,8 @@
 // import { DynamicSubscriptionPack } from "@/helpers/commonTypes";
 import { catagoryList, subscriptionList } from "@/utils/apiServices";
 import { Metadata } from "next";
-import SubscribeComponent from "@/components/Subscription/Subscription.view"
-import DynamicSubscriptionPack from "@/components/Subscription/static/subscription.type";
+import SubscribeComponent from "@/features/subscription/components/Subscription/Subscription.view"
+import DynamicSubscriptionPack from "@/features/subscription/components/Subscription/static/subscription.type";
 import { cookies } from "next/headers";
 
 

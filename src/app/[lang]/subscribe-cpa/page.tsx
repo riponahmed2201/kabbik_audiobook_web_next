@@ -1,9 +1,9 @@
 import { catagoryList, subscriptionList } from "@/utils/apiServices";
-import SubscribeComponentCPA from "@/components/Subscription/SubscribeCpa.view";
+import SubscribeComponentCPA from "@/features/subscription/components/Subscription/SubscribeCpa.view";
 // 36ac474653b4a1e3840e62eeebd4411d2dbf61b9 last commit by sakib vai
 import { Metadata } from "next";
 import { cookies } from "next/headers";
-import DynamicSubscriptionPack from "@/components/Subscription/static/subscription.type";
+import DynamicSubscriptionPack from "@/features/subscription/components/Subscription/static/subscription.type";
 // import { DynamicSubscriptionPack } from "@/helpers/commonTypes";
 
 export const metadata: Metadata = {

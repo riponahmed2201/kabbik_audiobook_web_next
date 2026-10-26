@@ -1,20 +1,20 @@
-import { AudiobookCard } from '@/components/CategoryWiseBooks/AudioBookCard.view';
-import CategorySelector from '@/components/CategoryWiseBooks/CategorySelector.view';
-import { TCategoryComponent } from '@/components/CategoryWiseBooks/static/category.types';
-import ThreeDBanner from '@/components/CategoryWiseBooks/ThreeDBanner.view';
-import TopAudioBookSection from '@/components/CategoryWiseBooks/TopAudioBookSection.view';
-import { container } from '@/components/ui/static/tailwind.classes';
+import { AudiobookCard } from '@/features/catalog/components/CategoryWiseBooks/AudioBookCard.view';
+import CategorySelector from '@/features/catalog/components/CategoryWiseBooks/CategorySelector.view';
+import { TCategoryComponent } from '@/features/catalog/components/CategoryWiseBooks/static/category.types';
+import ThreeDBanner from '@/features/catalog/components/CategoryWiseBooks/ThreeDBanner.view';
+import TopAudioBookSection from '@/features/catalog/components/CategoryWiseBooks/TopAudioBookSection.view';
+import { container } from '@/shared/ui/static/tailwind.classes';
 import { decodeWord } from '@/helpers/commonFunction';
 import { homeCatagoryItems } from '@/utils/apiServices';
 import React from 'react'
 import { getDictionary } from '../dictionaries';
-import ReferAndEarn from '@/components/CategoryWiseBooks/ReferAndEarn.view';
-import PlayListBooks from '@/components/CategoryWiseBooks/PlayListBooks';
+import ReferAndEarn from '@/features/catalog/components/CategoryWiseBooks/ReferAndEarn.view';
+import PlayListBooks from '@/features/catalog/components/CategoryWiseBooks/PlayListBooks';
 import { paths } from '@/utils/Paths';
 import Link from 'next/link';
 import MyPlayList from '@/svgs/MyPlayList.svg';
 import { cookies } from 'next/headers';
-import RentBanner from '@/components/CategoryWiseBooks/FixedRentSection.view';
+import RentBanner from '@/features/catalog/components/CategoryWiseBooks/FixedRentSection.view';
 
 export const metadata = {
   title: "Audiobooks | Kabbik",

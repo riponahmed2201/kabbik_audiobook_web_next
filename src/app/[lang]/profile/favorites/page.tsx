@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { deleteFavoritesApi, favoriteAudiobook, RemoveBooksFromPlaylist } from "@/utils/apiServices";
-import { FavoriteAudioBookInfo } from "@/components/Profile/static/profile.type";
+import { FavoriteAudioBookInfo } from "@/features/profile/components/Profile/static/profile.type";
 import Link from "next/link";
 import { paths } from "@/utils/Paths";
 import { toast } from "react-toastify";
-import Spinner from "@/components/ui/Spinner.view";
+import Spinner from "@/shared/ui/Spinner.view";
 import { siteConfig } from "@/config/config";
 import { BookOpen, Delete, Heart, Play, Sparkles, Star, Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";

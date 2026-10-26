@@ -1,4 +1,4 @@
-import MyPlayList from '@/components/MyPlayList/MyPlayList.view'
+import { MyPlayList } from '@/features/playlist'
 import React from 'react'
 
 const page = () => {

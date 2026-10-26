@@ -1,8 +1,8 @@
 'use client'
-import RewrdItems from '@/components/RewardPoint/RewrdItems.view'
-import TopPointCard from '@/components/RewardPoint/TopPointCard.view'
-// import { container } from '@/components/ui/static/tailwind.classes'
-// import { setUser } from '@/store/slicers/userSlice'
+import RewrdItems from '@/features/rewards/components/RewardPoint/RewrdItems.view'
+import TopPointCard from '@/features/rewards/components/RewardPoint/TopPointCard.view'
+// import { container } from '@/shared/ui/static/tailwind.classes'
+// import { setUser } from '@/features/profile/store/userSlice'
 import { useAppSelector } from '@/store/store'
 import { getUser_reward_profile } from '@/utils/apiServices'
 import React, { useEffect, useState } from 'react'
@@ -10,7 +10,7 @@ import {  RewardData } from './reward-point.type'
 import { useRouter } from 'next/navigation'
 import { decodeWord } from '@/helpers/commonFunction'
 import Link from 'next/link'
-import { container } from '@/components/ui/static/tailwind.classes'
+import { container } from '@/shared/ui/static/tailwind.classes'
 
 const Page = () => {
     const router=useRouter();

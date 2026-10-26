@@ -1,6 +1,6 @@
-import { ReferralData } from '@/components/ReferAndEarn/static/refeAndEarn.type';
-import SubscribedHomePage from '@/components/ReferAndEarn/SubscribedHomePage';
-import UnSubscribedHomePage from '@/components/ReferAndEarn/UnSubscribedHomePage'
+import { ReferralData } from '@/features/referEarn/components/ReferAndEarn/static/refeAndEarn.type';
+import SubscribedHomePage from '@/features/referEarn/components/ReferAndEarn/SubscribedHomePage';
+import UnSubscribedHomePage from '@/features/referEarn/components/ReferAndEarn/UnSubscribedHomePage'
 import { fetchReferAndEarn } from '@/utils/apiServices'
 import React from 'react'
 

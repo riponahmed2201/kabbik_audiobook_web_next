@@ -1,4 +1,4 @@
-import ReelsVideoGrid from '@/components/Reels/ReelList.view'
+import ReelsVideoGrid from '@/features/entertainment/components/Reels/ReelList.view'
 import React from 'react'
 
 const page = () => {

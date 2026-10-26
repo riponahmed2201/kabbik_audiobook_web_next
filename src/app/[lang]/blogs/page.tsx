@@ -1,13 +1,13 @@
-import { getApprovedBlogs } from '@/utils/server-api';
+import { getApprovedBlogs } from '@/shared/api/server-api';
 import Link from 'next/link'
 import React from 'react'
-import styles from '@/components/Home/static/blogs.module.css'
+import styles from '@/features/home/components/Home/static/blogs.module.css'
 import CalenderIcon from '@/svgs/calenderIcon';
 import { formatDate } from '@/helpers/commonFunction';
 import RightArrow from '@/svgs/RightArrow';
 import UserIcon from '@/svgs/UserIcon';
 import { BlogInfo, TBlogsProps } from '@/utils/types';
-import { container } from '@/components/ui/static/tailwind.classes';
+import { container } from '@/shared/ui/static/tailwind.classes';
 
 const page = async() => {
     const blogs:TBlogsProps['blogs'] = await getApprovedBlogs();

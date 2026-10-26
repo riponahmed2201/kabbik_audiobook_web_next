@@ -1,4 +1,4 @@
-import PointsPage from '@/components/RewardPoint/PointEarningWay.view'
+import PointsPage from '@/features/rewards/components/RewardPoint/PointEarningWay.view'
 import React from 'react'
 
 const page = () => {

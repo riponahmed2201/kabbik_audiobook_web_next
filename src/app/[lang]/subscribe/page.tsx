@@ -1,9 +1,10 @@
 // 36ac474653b4a1e3840e62eeebd4411d2dbf61b9 last commit by sakib vai
 // import { DynamicSubscriptionPack } from "@/helpers/commonTypes";
-import { catagoryList, subscriptionList } from "@/utils/apiServices";
+import { catagoryList } from "@/features/catalog/api";
+import { subscriptionList } from "@/features/subscription/api";
 import { Metadata } from "next";
-import SubscribeComponent from "@/components/Subscription/Subscription.view"
-import DynamicSubscriptionPack from "@/components/Subscription/static/subscription.type";
+import { SubscribeComponent } from "@/features/subscription";
+import DynamicSubscriptionPack from "@/features/subscription/components/Subscription/static/subscription.type";
 import { cookies } from "next/headers";
 
 

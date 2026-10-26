@@ -1,5 +1,5 @@
-// import TawkScript from "@/components/twak/TwakTo.view";
-import FacebookProvider from "@/components/Fblogin/FacebookProvider";
+// import TawkScript from "@/features/layoutShell/components/twak/TwakTo.view";
+import FacebookProvider from "@/features/auth/components/Fblogin/FacebookProvider";
 import { siteConfig } from "@/config/config";
 import type { Metadata } from "next";
 import "@/app/globals.css";

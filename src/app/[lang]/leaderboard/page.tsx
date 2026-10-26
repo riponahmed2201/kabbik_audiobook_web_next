@@ -13,7 +13,7 @@ import TopThreeCrown from "@/svgs/TopThreeCrown.svg";
 import Top2Crown from "@/svgs/TopThreeCrown.svg";
 import Top1Crown from "@/svgs/Top1Crown";
 import Top3Crown from "@/svgs/Top3Crown";
-import Spinner from "@/components/ui/Spinner.view";
+import Spinner from "@/shared/ui/Spinner.view";
 import { convertToBanglaDigits, decodeWord } from "@/helpers/commonFunction";
 
 export default function Leaderboard() {

@@ -4,11 +4,11 @@ import { homeListData, promoBannerList, topBanner } from '@/utils/apiServices';
 import styles from './static/topten.module.css'
 import Link from 'next/link';
 import React from 'react'
-import { OneToTen } from '@/components/Home/static/utils';
+import { OneToTen } from '@/features/home/components/Home/static/utils';
 import Image from 'next/image';
 import RedPlayerIcon from '@/svgs/RedPlayerIcon';
-import { container } from '@/components/ui/static/tailwind.classes';
-import CategorySelector from '@/components/CategoryWiseBooks/CategorySelector.view';
+import { container } from '@/shared/ui/static/tailwind.classes';
+import CategorySelector from '@/features/catalog/components/CategoryWiseBooks/CategorySelector.view';
 
 const page = async() => {
     // const homeData: HomeInfo = await homeListData();

@@ -5,7 +5,7 @@ import { Edigit, TShareContent, TtoastType, TtranslatorNums } from './commonType
 import { apiEndPoints } from '../utils/apiEndpoints';
 import { TBooks } from '@/pageTypes/home.types';
 import Cookies from 'js-cookie';
-import { ContinueBookStatusItem, RawItem } from '@/components/ui/static/types';
+import { ContinueBookStatusItem, RawItem } from '@/shared/ui/static/types';
 import { continue_listen_stat_post, logout } from '@/utils/apiServices';
 // import { headers } from 'next/headers';
 // @ts-ignore
