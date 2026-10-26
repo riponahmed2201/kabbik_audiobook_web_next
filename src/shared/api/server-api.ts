@@ -23,9 +23,10 @@ export const audioBookDetails = async (id: any) => {
 
   const url = `${apiEndPoints.audioBookDetails}/${id}?user_id=${userId}`;
 
-  const requestOptions = {
+  const requestOptions: RequestInit = {
     method: "GET",
     headers: myHeaders,
+    cache: "no-store",
   };
 
   try {

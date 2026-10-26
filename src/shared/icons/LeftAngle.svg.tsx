@@ -3,9 +3,8 @@ import React from 'react'
 const LeftAngle = () => {
   return (
     <>
-         <svg 
-          
-          className=" w-full h-full text-white cursor-pointer hover:opacity-80 transition-opacity" 
+         <svg
+          className="w-6 h-6 text-white cursor-pointer hover:opacity-80 transition-opacity shrink-0"
           viewBox="0 0 122 122" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"

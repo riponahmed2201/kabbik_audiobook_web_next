@@ -414,7 +414,9 @@ const AudiobookComponent = ({
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <Star />
+                    <span className="w-4 h-4 inline-flex shrink-0">
+                      <Star />
+                    </span>
                     <span className="text-cs md:text-cs2 ml-1 font-medium text-gray-900">
                       {audioBookDetailsData?.rating?.toFixed(1)}
                     </span>

@@ -125,7 +125,7 @@ const Navbar = (props:TNavbar) => {
             <div className='flex items-center gap-4'>
                 <Link href={'/'} >
                     <figure className='mr-3'>
-                        <span onClick={()=>router.back()} className={`max-w-[40px] ${pathname===''?'max-md:hidden':''} md:hidden inline-block`}><LeftAngle/></span>
+                        <span onClick={()=>router.back()} className={`w-10 h-10 flex items-center justify-center shrink-0 ${pathname===''?'max-md:hidden':''} md:hidden`}><LeftAngle/></span>
                         <img loading="lazy" className={`max-w-[138px] max-sm:max-w-[100px]  max-h-[54px] block ${pathname===''?'':'max-md:hidden'} max-:max-h-[46px]`} src={'/assets/logo.png'} alt="Logo" />
                         {/* <img loading="lazy" className='max-w-[80px] mt-[-10px] max-h-[43px] max-xxs2:block xxs2:hidden ' src={siteConfig.smallLogo} alt="Logo" /> */}
                     </figure>

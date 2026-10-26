@@ -21,7 +21,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import RightArrow from '@/svgs/RightArrow';
 // import ContiniueListening from './ContiniueListening.view';
-import { Ads } from '@/features/audiobook/components/audiobook/Ads';
+import { Ads } from '@/features/entertainment/components/Ads/Ads';
 import { InFeedAds } from '@/features/entertainment/components/Ads/InFeedAdd';
 import CommonModal from '@/shared/ui/CommonModal/CommonModal.view';
 import ImageCard from './RomjanSpecial.view';
