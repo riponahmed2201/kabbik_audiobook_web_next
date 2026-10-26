@@ -1,0 +1,264 @@
+/* PricingSubscription.module.css */
+
+.container {
+  min-height: 100vh;
+  background: #070f1e;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #E0E0E0;
+}
+
+.checkbox {
+  width: 10px;
+  height: 10px;
+  accent-color: #ff4081;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.cardsContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+    background: linear-gradient(344.39deg, #42289C -5.73%, #2D1B69 3.26%, #170E36 84.16%);
+  /* background: linear-gradient(135deg, #1a0a3e 0%, #2d1554 100%); */
+  /* border: 2px solid #4a2b7c; */
+  border: 1.5px solid #888888;
+  border-radius: 10px;
+  padding: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cardHover:hover {
+  transform: translateY(-5px);
+  border-color: #ff4081;
+  /* box-shadow: 0 10px 30px rgba(255, 64, 129, 0.3); */
+}
+
+.cardSelected {
+  border: 2px solid #ff4081;
+  background: linear-gradient(135deg, #2d1554 0%, #3d1f6a 100%);
+}
+
+.radioButton {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #8b5fbf;
+  margin-right: 15px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioButtonSelected {
+  border: 2px solid #ff4081;
+}
+
+.radioInner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff4081;
+}
+
+.cardContent {
+  flex: 1;
+  color: white;
+}
+
+.flex_cont{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.packageName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.packageType {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 10px;
+  color: white;
+}
+
+.oldPrice {
+  font-size: 18px;
+  color: #bcb8ca;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(153.02deg, rgba(247, 56, 148, 0.87) 15.25%, rgba(255, 104, 0, 0.87) 100.01%);
+
+  /* background: linear-gradient(135deg, #ff4081 0%, #ff6b9d 100%); */
+  color: white;
+  padding: 4px 25px;
+  font-size: 12px;
+  font-weight: bold;
+  transform: rotate(45deg);
+  transform-origin: center;
+  width: 150px;
+  text-align: center;
+  /* box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4); */
+  top: 15px;
+  right: -40px;
+}
+
+.footer {
+  max-width: 98%;
+  margin: 30px auto 0;
+  margin-bottom: 40px;
+  /* background: #1a0a3e; */
+  border: 1px solid #5b0d3c;
+  /* border: 1px solid; */
+
+
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.footerHeader {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.footerContent {
+  /* padding: 0 20px 20px; */
+  /* color: #b8a8d9; */
+  font-size: 14px;
+  line-height: 1.6;
+}
+.logo_cont{
+  /* position: relative; */
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.logo{
+  max-width: 130px;
+  max-height: 70px;
+  display: block;
+  margin: auto;
+  /* position: absolute; */
+  z-index: 3;
+  
+}
+.logo_text{
+  text-align: center;
+  z-index: 3;
+  top:30%;
+  font-size: 14px;
+  margin-top: 10px;
+  margin: auto;
+  /* white-space: no; */
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.old_price {
+  position: relative;
+  display: inline-block;
+}
+.old_price_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #dc2626;
+}
+.diagonal_line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #dc2626;
+  transform: translateY(-50%) rotate(-15deg);
+  transform-origin: center;
+}
+
+.smScreen{
+  display: none;
+}
+.bigScreen{
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .smScreen{
+    display: block;
+  }
+  .bigScreen{
+    display: none;
+  }
+}

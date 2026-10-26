@@ -1,0 +1,34 @@
+.customContainer {
+  width: 100%;
+  padding: 0 0.75rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.featureImage {
+  border-radius: 15px;
+}
+
+.publishDate {
+  color: cadetblue;
+}
+
+.contentBody {
+  color: #d0d0d0;
+  margin: 1.5rem 0 0 0;
+  line-height: 1.75;
+}
+
+@media screen and (min-width: 768px) {
+  .customContainer {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .customContainer {
+    padding: 0 16rem;
+  }
+}

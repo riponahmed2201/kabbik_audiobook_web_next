@@ -1,0 +1,218 @@
+.divBody {
+  margin-top: 20px;
+}
+
+.cardBgImg {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+.blPaymentBg{
+  background: rgba(230, 92, 29, 1) !important;
+}
+
+.BtnBoxClass{
+    background: linear-gradient(to bottom right, rgba(255, 152, 0, 1), rgba(230, 92, 29, 1)) !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 5px 5px 10px #33333381
+  -5px -5px -10px #33333381;
+
+}
+
+.BtnBoxClass:hover{
+    background: linear-gradient(to bottom right, rgba(255, 152, 0, 1), rgba(230, 92, 29, 1)) !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 5px 5px 15px #33333381
+  -5px -5px -15px #33333381;
+
+}
+
+.gradient_para{
+   background: linear-gradient(90deg, #B9396F -30.35%, #8E2069 145.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+  line-height: 1.4;
+}
+
+.blPaymentInputBg{
+  background-color: white;
+  color: #333 !important;
+  outline: 1px solid white !important;
+  border: 1px solid white !important;
+  box-shadow: 5px 5px 10px #33333381
+  -5px -5px -10px #33333381;
+}
+.blPaymentInputBg:focus{
+  background-color: white;
+}
+
+.modal_containers{
+  background-color: #050F1E;
+  height: 200px;
+}
+
+.number_modal{
+  background-color: #050F1E !important;
+}
+
+.otpInputField{
+  border:1px solid white !important;
+  outline: none;
+  background-color: white !important;
+  color: #333 !important;
+  box-shadow: 5px 5px 10px #33333381
+  -5px -5px -10px #33333381;
+}
+.cardTagImg {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+
+.text_color {
+  color: rgb(30, 25, 25) !important;
+}
+
+.subscribeBtn {
+  background: white !important;
+  background: white !important;
+}
+
+.bkashSubscribeBtn {
+  background: white !important;
+  background: white !important;
+}
+
+.footerImg {
+  max-width: 100%;
+  max-height: 100%;
+  height: inherit !important;
+}
+
+.parentDiv:nth-child(1) .cardBg {
+  position: relative;
+  background: radial-gradient(
+    632.79% 116.68% at 15.51% 107.39%,
+    #9a187a 0%,
+    #d644ba 100%
+  );
+}
+
+.parentDiv:nth-child(2) .cardBg {
+  position: relative;
+  background: radial-gradient(
+    1002.71% 140.3% at 15.51% 107.39%,
+    #e6842b 0%,
+    #fba255 100%
+  );
+}
+
+.parentDiv:nth-child(3) .cardBg {
+  position: relative;
+  background: radial-gradient(
+    1002.71% 140.3% at 15.51% 107.39%,
+    #e46a3c 0%,
+    #fd9668 100%
+  );
+}
+
+.parentDiv:nth-child(4) .cardBg {
+  position: relative;
+  background: radial-gradient(
+    632.79% 116.68% at 15.51% 107.39%,
+    #512272 0%,
+    #8f50bc 100%
+  );
+}
+
+.parentDiv:nth-child(5) .cardBg {
+  position: relative;
+  background: radial-gradient(
+    632.79% 116.68% at 15.51% 107.39%,
+    #575516 0%,
+    #b1ad35 100%
+  );
+}
+
+.parentDiv:nth-child(6) .cardBg {
+  position: relative;
+  background: radial-gradient(
+    632.79% 116.68% at 15.51% 107.39%,
+    #20716f 0%,
+    #35bab8 100%
+  );
+}
+
+.gradient_text {
+  background: linear-gradient(360deg, #CC4473 0%, #FD6D81 34.8%, #881D69 69.59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+}
+
+
+.categoriesList {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+}
+
+.otpInputField {
+  background-color: transparent;
+  color: white;
+  border: rgb(30, 25, 25) solid 1px;
+  height: 50px;
+  width: 50px !important;
+}
+
+.control {
+  color: white;
+  background: transparent;
+  flex-grow: 1;
+  border: 0;
+}
+
+.control:focus {
+  background: var(--kabbik-custom-modal-overlay);
+  color: white;
+  border: 0;
+  outline: 0;
+}
+
+.control::placeholder {
+  color: var(--kabbik-placeholder-color);
+}
+
+@media screen and (min-width: 450px) {
+  .categoriesList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .categoriesList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .categoriesList {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .categoriesList {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}

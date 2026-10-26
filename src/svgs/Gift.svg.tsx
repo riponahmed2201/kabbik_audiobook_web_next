@@ -1,0 +1,38 @@
+import React from 'react'
+
+const GiftIcon = () => {
+  return (
+    <>
+        <svg className='max-w-full max-h-full' viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_11_2478)">
+<rect x="2.82959" width="71.7943" height="71.7943" rx="16.3169" fill="url(#paint0_linear_11_2478)"/>
+</g>
+<mask id="mask0_11_2478" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="19" y="16" width="40" height="40">
+<rect x="19.1509" y="16.3211" width="39.1605" height="39.1605" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_11_2478)">
+<path d="M25.6774 52.2183V34.2697H22.4141V24.4796H30.8988C30.7629 24.2348 30.6745 23.9765 30.6337 23.7045C30.5929 23.4326 30.5725 23.147 30.5725 22.8479C30.5725 21.4881 31.0484 20.3324 32.0002 19.3805C32.9521 18.4287 34.1078 17.9528 35.4676 17.9528C36.0931 17.9528 36.6777 18.0684 37.2216 18.2996C37.7655 18.5307 38.2686 18.8502 38.7309 19.2582C39.1933 18.8231 39.6964 18.4967 40.2403 18.2792C40.7842 18.0616 41.3688 17.9528 41.9943 17.9528C43.3541 17.9528 44.5098 18.4287 45.4617 19.3805C46.4135 20.3324 46.8894 21.4881 46.8894 22.8479C46.8894 23.147 46.8622 23.4258 46.8078 23.6841C46.7534 23.9425 46.6718 24.2076 46.5631 24.4796H55.0478V34.2697H51.7845V52.2183H25.6774ZM41.9943 21.2162C41.532 21.2162 41.1445 21.3726 40.8317 21.6853C40.519 21.998 40.3626 22.3856 40.3626 22.8479C40.3626 23.3102 40.519 23.6977 40.8317 24.0105C41.1445 24.3232 41.532 24.4796 41.9943 24.4796C42.4566 24.4796 42.8442 24.3232 43.1569 24.0105C43.4696 23.6977 43.626 23.3102 43.626 22.8479C43.626 22.3856 43.4696 21.998 43.1569 21.6853C42.8442 21.3726 42.4566 21.2162 41.9943 21.2162ZM33.8359 22.8479C33.8359 23.3102 33.9923 23.6977 34.305 24.0105C34.6177 24.3232 35.0053 24.4796 35.4676 24.4796C35.9299 24.4796 36.3174 24.3232 36.6301 24.0105C36.9429 23.6977 37.0993 23.3102 37.0993 22.8479C37.0993 22.3856 36.9429 21.998 36.6301 21.6853C36.3174 21.3726 35.9299 21.2162 35.4676 21.2162C35.0053 21.2162 34.6177 21.3726 34.305 21.6853C33.9923 21.998 33.8359 22.3856 33.8359 22.8479ZM25.6774 27.7429V31.0063H37.0993V27.7429H25.6774ZM37.0993 48.9549V34.2697H28.9408V48.9549H37.0993ZM40.3626 48.9549H48.5211V34.2697H40.3626V48.9549ZM51.7845 31.0063V27.7429H40.3626V31.0063H51.7845Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_11_2478" x="0.000206709" y="0" width="77.4532" height="77.453" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.82938"/>
+<feGaussianBlur stdDeviation="1.41469"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_2478"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_2478" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_11_2478" x1="-39.9709" y1="-18.5008" x2="51.9811" y2="74.0033" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E85EC4"/>
+<stop offset="1" stop-color="#A731EF"/>
+</linearGradient>
+</defs>
+</svg>
+
+    </>
+  )
+}
+
+export default GiftIcon

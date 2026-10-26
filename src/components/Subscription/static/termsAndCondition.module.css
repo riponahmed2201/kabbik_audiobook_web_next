@@ -1,0 +1,125 @@
+
+.rootCont{
+  /* max-height: 100vh; */
+  text-align: justify;
+}
+.container {
+          overflow-y: scroll;
+          /* background-color: #0e1d3f; */
+          position: relative;
+          overflow: hidden;
+          padding: 20px 12px;
+        }
+
+        /* .circularGradient {
+          position: absolute;
+          right: -20%;
+          top: -10%;
+          width: 30vw;
+          height: 30vw;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255, 0, 153, 0.2), transparent);
+          z-index: 0;
+        } */
+
+        /* .circularGradient2 {
+          position: absolute;
+          left: -15%;
+          bottom: -15%;
+          width: 35vw;
+          height: 35vw;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(0, 153, 255, 0.15), transparent);
+          z-index: 0;
+        } */
+
+        .content {
+          /* max-width: 900px; */
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+          /* background: rgba(255, 255, 255, 0.03); */
+          /* backdrop-filter: blur(10px); */
+          border-radius: 20px;
+          padding: 10px;
+          /* border: 1px solid rgba(255, 255, 255, 0.1); */
+          /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
+        }
+
+        .mainTitle {
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin-bottom: 40px;
+          text-align: center;
+          letter-spacing: -0.5px;
+        }
+
+        .section {
+          margin-bottom: 20px;
+        }
+
+        .sectionTitle {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: #ffffff;
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          border-bottom: 2px solid rgba(255, 0, 153, 0.3);
+        }
+
+        .subsectionTitle {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: #e0e0e0;
+          margin-top: 25px;
+          margin-bottom: 12px;
+        }
+
+        .paragraph {
+          font-size: 1rem;
+          line-height: 1.8;
+          color: #c0c9d9;
+          margin-bottom: 16px;
+        }
+
+        .list {
+          list-style-type: disc;
+          padding-left: 30px;
+          margin-bottom: 20px;
+        }
+
+        .list li {
+          font-size: 1rem;
+          line-height: 1.8;
+          color: #c0c9d9;
+          margin-bottom: 10px;
+        }
+
+        .list li strong {
+          color: #ffffff;
+          font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+          .content {
+            padding: 20px 0px;
+          }
+
+          .mainTitle {
+            font-size: 1.4rem;
+          }
+
+          .sectionTitle {
+            font-size: 1.2rem;
+          }
+
+          .subsectionTitle {
+            font-size: 1rem;
+          }
+
+          .paragraph,
+          .list li {
+            font-size: 0.85rem;
+          }
+        }
